@@ -1,11 +1,11 @@
 <% @books.each do |book| %>
     <section id= 'books-<%=book.id%>'>
         <h1><%= book.title %></h1>
-        <h2>By: 
+        <h3>Written By: 
         <% book.authors.each do |author| %>
-            <%= link_to "#{author.name}", "/authors/#{author.id}" %>
-        <% end %></h2>
-        <h2>Number of Pages: <%= book.pages %></h2>
-        <h2>Published in: <%= book.year %></h2>
+            <li><%= link_to "#{author.name}", "/authors/#{author.id}" %>
+        <% end %></li></h3>
+        <h3>Number of Pages: <%= book.pages %></h3>
+        <h3>Published in: <%= book.year %></h3><br><br><br>
     </section>
 <% end %>
